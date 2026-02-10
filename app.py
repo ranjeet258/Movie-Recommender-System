@@ -1,9 +1,11 @@
+import os
 import streamlit as st
 import pickle
 import pandas as pd
 import requests
 
-API_KEY = st.secrets["TMDB_API_KEY"]
+API_KEY = os.environ.get("TMDB_API_KEY") or st.secrets.get("TMDB_API_KEY")
+# API_KEY = st.secrets["TMDB_API_KEY"]
 BASE_IMAGE_URL = "https://image.tmdb.org/t/p/w500"
 
 @st.cache_data(show_spinner=False)
