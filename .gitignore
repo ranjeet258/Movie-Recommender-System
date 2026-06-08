@@ -27,7 +27,6 @@ __pycache__/
 # ===============================
 # Model & Large Generated Files
 # ===============================
-*.pkl
 *.joblib
 *.h5
 
